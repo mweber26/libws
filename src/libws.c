@@ -511,7 +511,11 @@ char *ws_get_uri(ws_t ws, char *buf, size_t bufsize)
 
 	// TODO: Check return value?
 	if (evutil_snprintf(buf, bufsize, "%s://%s:%d/%s", 
+#ifdef LIBWS_WITH_OPENSSL
 		(ws->use_ssl != LIBWS_SSL_OFF) ? "wss" : "ws", 
+#else
+		"ws",
+#endif
 		ws->server,
 		ws->port,
 		ws->uri) < 0)
