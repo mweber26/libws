@@ -709,7 +709,7 @@ static void _ws_read_callback(struct bufferevent *bev, void *ptr)
 			case WS_PARSE_STATE_ERROR:
 				// TODO: Do anything else here?
 				_ws_shutdown(ws);
-				break;
+				return;
 			case WS_PARSE_STATE_NEED_MORE: return;
 			case WS_PARSE_STATE_SUCCESS:
 			{
