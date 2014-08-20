@@ -10,6 +10,11 @@
 #include <stdio.h>
 #ifdef _WIN32
 #include <WinSock2.h>
+#include <ws2tcpip.h>
+#ifndef _WIN32_IE
+#define _WIN32_IE 0x400
+#endif
+#include <shlobj.h>
 #endif
 #ifdef LIBWS_HAVE_SYS_SOCKET_H
 #include <sys/socket.h>
@@ -119,6 +124,21 @@ int ws_global_init(ws_base_t *base)
 			LIBWS_LOG(LIBWS_CRIT, "Out of memory!");
 			goto fail;
 		}
+
+#ifdef WIN32
+		char path[MAX_PATH+1];
+		static const char hostfile[] = "\\drivers\\etc\\hosts";
+		char *path_out;
+		size_t len_out;
+
+		if(!SHGetSpecialFolderPathA(NULL, path, CSIDL_SYSTEM, 0))
+			return NULL;
+		len_out = strlen(path)+strlen(hostfile)+1;
+		path_out = malloc(len_out+2);
+		evutil_snprintf(path_out, len_out, "%s%s", path, hostfile);
+		evdns_base_load_hosts(b->dns_base, path_out);
+		free(path_out);
+#endif
 	}
 
 	#ifdef LIBWS_WITH_OPENSSL
