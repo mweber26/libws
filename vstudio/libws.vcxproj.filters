@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="libevent">
+      <UniqueIdentifier>{59f4db3e-e32c-4a84-b96c-03cb8ee0ab55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libws">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\libws.c">
+      <Filter>libws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libws_compat.c">
+      <Filter>libws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libws_handshake.c">
+      <Filter>libws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libws_header.c">
+      <Filter>libws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libws_log.c">
+      <Filter>libws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libws_private.c">
+      <Filter>libws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libws_sha1.c">
+      <Filter>libws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libws_utf8.c">
+      <Filter>libws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\buffer.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\buffer_iocp.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\bufferevent.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\bufferevent_async.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\bufferevent_filter.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\bufferevent_pair.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\bufferevent_ratelim.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\bufferevent_sock.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evdns.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\event.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\event_iocp.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\event_tagging.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evmap.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evport.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evrpc.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evthread.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evthread_win32.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evutil.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evutil_rand.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\evutil_time.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\http.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\kqueue.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\listener.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\log.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\signal.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\strlcpy.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\libevent\win32select.c">
+      <Filter>libevent</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\libws.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_handshake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_sha1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_utf8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libws_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libws_private_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\libws_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
